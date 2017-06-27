@@ -20,16 +20,16 @@
 			RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.01}" 
 			RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"/>
 
-        <local:XFFlipView x:Name="XFFlipViewControl"
+        <local:XFFlipView x:Name="XFFlipViewControl1"
 		RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.06}" 
 		RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
-		RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">
+		RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.7}">
 
             <local:XFFlipView.FrontView>
                 <RelativeLayout BackgroundColor="#0080ff">
                     <Label 
 						Text="This is Front View" 
-						FontSize="25"
+						FontSize="Large"
 						HorizontalTextAlignment="Center" 
 						VerticalTextAlignment="Center"
 						RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
@@ -49,7 +49,7 @@
                 <RelativeLayout BackgroundColor="#ff0080">
                     <Label 
 						Text="This is Back View"  
-						FontSize="25"
+						FontSize="Large"
 						HorizontalTextAlignment="Center" 
 						VerticalTextAlignment="Center"
 						RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
@@ -68,9 +68,10 @@
         </local:XFFlipView>
 
         <Button Text="Flip it!" 
+        x:Name="flipItButonControl"
 		RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.9}"
 		RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
-		Clicked="Button_OnClicked" />
+		Clicked="flipItButonControl_OnClicked" />
 
     </RelativeLayout>
 

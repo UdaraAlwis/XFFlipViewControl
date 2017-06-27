@@ -16,11 +16,9 @@ namespace XFFlipViewControl
             TimerRunner();
         }
 
-        private void Button_OnClicked(object sender, EventArgs e)
+        private void flipItButonControl_OnClicked(object sender, EventArgs e)
         {
-            //FlipControl.MoveToPreviousCommand?.Execute(null);
-
-            XFFlipViewControl.IsFlipped = !XFFlipViewControl.IsFlipped;
+            XFFlipViewControl1.IsFlipped = !XFFlipViewControl1.IsFlipped;
         }
 
         private void TimerRunner()
