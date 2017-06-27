@@ -8,7 +8,7 @@
     <RelativeLayout>
 
         <local:XFFlipView x:Name="XFFlipViewControl"
-		BackgroundColor="White"
+		BackgroundColor="#8000ff"
 		RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
 		RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">
 
@@ -20,7 +20,7 @@
 				  RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
                     </Label>
                     <Label 
-				 HorizontalTextAlignment="Center"  x:Name="frontViewTimeLabel" FontSize="12"
+				 HorizontalTextAlignment="Center"  x:Name="frontViewTimeLabel" FontSize="15"
 				  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
 				  RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
                     </Label>
@@ -31,12 +31,12 @@
                 <RelativeLayout BackgroundColor="#ff0080">
                     <Label Text="This is Back View"  
 				 HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
-                           FontSize="15"
+                           FontSize="18"
 				  RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
 				  RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
                     </Label>
                     <Label   
-				 HorizontalTextAlignment="Center" x:Name="backViewTimeLabel" FontSize="12"
+				 HorizontalTextAlignment="Center" x:Name="backViewTimeLabel" FontSize="15"
 				  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
 				  RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
                     </Label>
