@@ -36,7 +36,10 @@ namespace XFFlipViewControl
                     ._contentHolder
                     .Children
                     .Add(((XFFlipView)bindable).FrontView,
-                    Constraint.RelativeToParent((parent) => 0)
+                        Constraint.Constant(0),
+                        Constraint.Constant(0),
+                        Constraint.RelativeToParent((parent) => parent.Width),
+                        Constraint.RelativeToParent((parent) => parent.Height)
                     );
             }
         }
@@ -67,12 +70,15 @@ namespace XFFlipViewControl
             //Set BackView Rotation before rotating
             if (newvalue != null)
             {
-                ((XFFlipView)bindable)
-                       ._contentHolder
-                       .Children
-                       .Add(((XFFlipView)bindable).BackView,
-                       Constraint.RelativeToParent((parent) => 0)
-                       );
+                ((XFFlipView) bindable)
+                    ._contentHolder
+                    .Children
+                    .Add(((XFFlipView) bindable).BackView,
+                        Constraint.Constant(0),
+                        Constraint.Constant(0),
+                        Constraint.RelativeToParent((parent) => parent.Width),
+                        Constraint.RelativeToParent((parent) => parent.Height)
+                     );
 
                 ((XFFlipView)bindable).BackView.IsVisible = false;
             }

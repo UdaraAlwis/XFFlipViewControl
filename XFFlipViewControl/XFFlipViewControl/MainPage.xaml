@@ -11,19 +11,15 @@
         </OnPlatform>
     </ContentPage.Padding>
 
-    <RelativeLayout>
+    <Grid>
 
         <Label    
 			FontSize="20"
 			HorizontalTextAlignment="Center" 
-			Text="Animated Flip View with pure Xamarin Forms!"
-			RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.01}" 
-			RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"/>
-
-        <local:XFFlipView x:Name="XFFlipViewControl1"
-		RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.07}" 
-		RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
-		RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.7}">
+			Text="Animated Flip View with pure Xamarin Forms!"/>
+ 
+        <local:XFFlipView
+            x:Name="XFFlipViewControl1" Grid.Row="1" >
 
             <local:XFFlipView.FrontView>
                 <Frame CornerRadius="10" HasShadow="True" Padding="0" Margin="10" 
@@ -34,15 +30,15 @@
 						    FontSize="Large"
 						    HorizontalTextAlignment="Center" 
 						    VerticalTextAlignment="Center"
-						    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
-						    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
+                            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
+                            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
                         </Label>
                         <Label 
 						    HorizontalTextAlignment="Center"  
 						    x:Name="frontViewTimeLabel" 
 						    FontSize="15"
-						    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
-						    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
+                            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
+                            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
                         </Label>
                     </RelativeLayout>
                 </Frame>
@@ -73,12 +69,16 @@
 
         </local:XFFlipView>
 
-        <Button Text="Flip it!" 
-        x:Name="flipItButonControl"
-		RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.9}"
-		RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
-		Clicked="flipItButonControl_OnClicked" />
+        <Button x:Name="flipItButonControl" 
+                Text="Flip it!" Grid.Row="3"
+                Clicked="flipItButonControl_OnClicked" />
 
-    </RelativeLayout>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" ></RowDefinition>
+            <RowDefinition Height="300" ></RowDefinition>
+            <RowDefinition Height="*" ></RowDefinition>
+            <RowDefinition Height="50" ></RowDefinition>
+        </Grid.RowDefinitions>
+    </Grid>
 
 </ContentPage>
