@@ -21,48 +21,54 @@
 			RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"/>
 
         <local:XFFlipView x:Name="XFFlipViewControl1"
-		RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.06}" 
+		RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.07}" 
 		RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
 		RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.7}">
 
             <local:XFFlipView.FrontView>
-                <RelativeLayout BackgroundColor="#0080ff">
-                    <Label 
-						Text="This is Front View" 
-						FontSize="Large"
-						HorizontalTextAlignment="Center" 
-						VerticalTextAlignment="Center"
-						RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
-						RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
-                    </Label>
-                    <Label 
-						HorizontalTextAlignment="Center"  
-						x:Name="frontViewTimeLabel" 
-						FontSize="15"
-						RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
-						RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
-                    </Label>
-                </RelativeLayout>
+                <Frame CornerRadius="10" HasShadow="True" Padding="0" Margin="10" 
+                       OutlineColor="Silver" BackgroundColor="#0080ff">
+                    <RelativeLayout>
+                        <Label 
+						    Text="This is Front View" 
+						    FontSize="Large"
+						    HorizontalTextAlignment="Center" 
+						    VerticalTextAlignment="Center"
+						    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
+						    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
+                        </Label>
+                        <Label 
+						    HorizontalTextAlignment="Center"  
+						    x:Name="frontViewTimeLabel" 
+						    FontSize="15"
+						    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
+						    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
+                        </Label>
+                    </RelativeLayout>
+                </Frame>
             </local:XFFlipView.FrontView>
 
             <local:XFFlipView.BackView>
-                <RelativeLayout BackgroundColor="#ff0080">
-                    <Label 
-						Text="This is Back View"  
-						FontSize="Large"
-						HorizontalTextAlignment="Center" 
-						VerticalTextAlignment="Center"
-						RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
-						RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
-                    </Label>
-                    <Label   
-						HorizontalTextAlignment="Center" 
-						x:Name="backViewTimeLabel" 
-						FontSize="15"
-						RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
-						RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
-                    </Label>
-                </RelativeLayout>
+                <Frame CornerRadius="10" HasShadow="True" Padding="0" Margin="10" 
+                       OutlineColor="Silver" BackgroundColor="#ff0080">
+                    <RelativeLayout>
+                        <Label 
+						    Text="This is Back View"  
+						    FontSize="Large"
+						    HorizontalTextAlignment="Center" 
+						    VerticalTextAlignment="Center"
+						    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
+						    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
+                        </Label>
+                        <Label   
+						    HorizontalTextAlignment="Center" 
+						    x:Name="backViewTimeLabel" 
+						    FontSize="15"
+						    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
+						    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
+                        </Label>
+                    </RelativeLayout>
+                </Frame>
             </local:XFFlipView.BackView>
 
         </local:XFFlipView>
