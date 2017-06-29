@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace XFFlipViewControl
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class XFFlipViewControlDemo : ContentPage
+    public partial class XNFlipViewDemoPage : ContentPage
     {
-        public XFFlipViewControlDemo()
+        public XNFlipViewDemoPage()
         {
             InitializeComponent();
         }
