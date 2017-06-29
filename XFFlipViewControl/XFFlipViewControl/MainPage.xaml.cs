@@ -12,26 +12,21 @@ namespace XFFlipViewControl
         public MainPage()
         {
             InitializeComponent();
-
-            TimerRunner();
         }
 
-        private void flipItButonControl_OnClicked(object sender, EventArgs e)
+        private void flipViewDemoButton_OnClicked(object sender, EventArgs e)
         {
-            XFFlipViewControl1.IsFlipped = !XFFlipViewControl1.IsFlipped;
+            
         }
 
-        private void TimerRunner()
+        private void xfFlipAnimationButton_OnClicked(object sender, EventArgs e)
         {
-            Device.StartTimer(TimeSpan.FromSeconds(1), 
-                ()=>
-                {
-                    frontViewTimeLabel.Text = $"Timestamp: {DateTime.Now}";
+            Navigation.PushAsync(new XFFlipViewDemoPage());
+        }
 
-                    backViewTimeLabel.Text = $"Timestamp: {DateTime.Now}";
-
-                    return true;
-                });
+        private void xnFlipAnimationButton_OnClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new XNFlipViewDemoPage());
         }
     }
 }

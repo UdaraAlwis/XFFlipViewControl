@@ -13,7 +13,7 @@ namespace XFFlipViewControl
         {
             InitializeComponent();
 
-            MainPage = new XFFlipViewControl.MainPage();
+            MainPage = new NavigationPage(new XFFlipViewControl.MainPage());
         }
 
         protected override void OnStart()

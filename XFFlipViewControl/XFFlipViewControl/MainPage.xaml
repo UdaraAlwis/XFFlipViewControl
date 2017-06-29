@@ -13,71 +13,24 @@
 
     <Grid>
 
-        <Label    
-			FontSize="20"
-			HorizontalTextAlignment="Center" 
-			Text="Animated Flip View with pure Xamarin Forms!"/>
- 
-        <local:XFFlipView
-            x:Name="XFFlipViewControl1" Grid.Row="1" >
+        <Button x:Name="flipViewDemoButton" 
+                Text="Flippable View Demo" Grid.Row="1"
+                Clicked="flipViewDemoButton_OnClicked" />
 
-            <local:XFFlipView.FrontView>
-                <Frame CornerRadius="10" HasShadow="True" Padding="0" Margin="10" 
-                       OutlineColor="Silver" BackgroundColor="#0080ff">
-                    <RelativeLayout>
-                        <Label 
-						    Text="This is Front View" 
-						    FontSize="Large"
-						    HorizontalTextAlignment="Center" 
-						    VerticalTextAlignment="Center"
-                            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
-                            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
-                        </Label>
-                        <Label 
-						    HorizontalTextAlignment="Center"  
-						    x:Name="frontViewTimeLabel" 
-						    FontSize="15"
-                            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
-                            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
-                        </Label>
-                    </RelativeLayout>
-                </Frame>
-            </local:XFFlipView.FrontView>
-
-            <local:XFFlipView.BackView>
-                <Frame CornerRadius="10" HasShadow="True" Padding="0" Margin="10" 
-                       OutlineColor="Silver" BackgroundColor="#ff0080">
-                    <RelativeLayout>
-                        <Label 
-						    Text="This is Back View"  
-						    FontSize="Large"
-						    HorizontalTextAlignment="Center" 
-						    VerticalTextAlignment="Center"
-						    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
-						    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
-                        </Label>
-                        <Label   
-						    HorizontalTextAlignment="Center" 
-						    x:Name="backViewTimeLabel" 
-						    FontSize="15"
-						    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
-						    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
-                        </Label>
-                    </RelativeLayout>
-                </Frame>
-            </local:XFFlipView.BackView>
-
-        </local:XFFlipView>
-
-        <Button x:Name="flipItButonControl" 
-                Text="Flip it!" Grid.Row="3"
-                Clicked="flipItButonControl_OnClicked" />
+        <Button x:Name="xfFlipAnimationButton" 
+                Text="Xamarin Forms Flippable View" Grid.Row="2"
+                Clicked="xfFlipAnimationButton_OnClicked" />
+        
+        <Button x:Name="xnFlipAnimationButton" 
+                Text="Xamarin Native Flippable View" Grid.Row="3"
+                Clicked="xnFlipAnimationButton_OnClicked" />
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" ></RowDefinition>
-            <RowDefinition Height="300" ></RowDefinition>
             <RowDefinition Height="*" ></RowDefinition>
             <RowDefinition Height="50" ></RowDefinition>
+            <RowDefinition Height="50" ></RowDefinition>
+            <RowDefinition Height="50" ></RowDefinition>
+            <RowDefinition Height="*" ></RowDefinition>
         </Grid.RowDefinitions>
     </Grid>
 
