@@ -36,7 +36,7 @@
                         <Label 
                             HorizontalTextAlignment="Center"  
                             x:Name="frontViewTimeLabel" 
-                            FontSize="15"
+                            FontSize="Large" Margin="20"
                             RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
                             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
                         </Label>
@@ -59,7 +59,7 @@
                         <Label   
                             HorizontalTextAlignment="Center" 
                             x:Name="backViewTimeLabel" 
-                            FontSize="15"
+                            FontSize="Large" Margin="20"
                             RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
                             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
                         </Label>
@@ -69,13 +69,18 @@
 
         </xfFlipViewControl:XFFlipView>
 
-        <Button x:Name="flipItButonControl" 
-                Text="Flip it!" Grid.Row="2"
-                Clicked="flipItButonControl_OnClicked" />
+        <Button x:Name="moreButton" 
+                Text="more of this" Grid.Row="2"
+                Clicked="moreButton_OnClicked" />
+
+        <Button x:Name="flipItButton" 
+                Text="Flip it!" Grid.Row="3"
+                Clicked="flipItButton_OnClicked" />
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" ></RowDefinition>
             <RowDefinition Height="*" ></RowDefinition>
+            <RowDefinition Height="50" ></RowDefinition>
             <RowDefinition Height="50" ></RowDefinition>
         </Grid.RowDefinitions>
     </Grid>

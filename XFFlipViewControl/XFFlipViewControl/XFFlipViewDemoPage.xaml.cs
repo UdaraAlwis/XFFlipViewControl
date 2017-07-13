@@ -19,9 +19,14 @@ namespace XFFlipViewControl
             TimerRunner();
         }
 
-        private void flipItButonControl_OnClicked(object sender, EventArgs e)
+        private void flipItButton_OnClicked(object sender, EventArgs e)
         {
             XFFlipViewControl1.IsFlipped = !XFFlipViewControl1.IsFlipped;
+        }
+
+        private void moreButton_OnClicked(object sender, EventArgs e)
+        {
+
         }
 
         private void TimerRunner()
@@ -29,9 +34,9 @@ namespace XFFlipViewControl
             Device.StartTimer(TimeSpan.FromSeconds(1),
                 () =>
                 {
-                    frontViewTimeLabel.Text = $"Timestamp: {DateTime.Now}";
+                    frontViewTimeLabel.Text = $"Timestamp: {DateTime.Now.ToString("F")}";
 
-                    backViewTimeLabel.Text = $"Timestamp: {DateTime.Now}";
+                    backViewTimeLabel.Text = $"Timestamp: {DateTime.Now.ToString("F")}";
 
                     return true;
                 });
