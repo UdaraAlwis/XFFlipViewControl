@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:xfFlipViewControl="clr-namespace:XFFlipViewControl;assembly=XFFlipViewControl"
-             x:Class="XFFlipViewControl.DemoPage">
+<ContentPage
+    x:Class="XFFlipViewControl.DemoPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xfFlipViewControl="clr-namespace:XFFlipViewControl;assembly=XFFlipViewControl">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
             <OnPlatform.iOS>
@@ -10,217 +11,311 @@
             </OnPlatform.iOS>
         </OnPlatform>
     </ContentPage.Padding>
-    
+
     <ContentPage.Content>
         <Grid>
-            <xfFlipViewControl:XFFlipView 
-                x:Name="XFFlipViewControl1" Grid.Row="0" Grid.Column="0" >
+            <xfFlipViewControl:XFFlipView
+                x:Name="XFFlipViewControl1"
+                Grid.Row="0"
+                Grid.Column="0">
 
                 <xfFlipViewControl:XFFlipView.FrontView>
-                    <Frame CornerRadius="10" HasShadow="True" Padding="0" Margin="10" 
-                           OutlineColor="Silver" BackgroundColor="#0080ff">
+                    <Frame
+                        Margin="10"
+                        Padding="0"
+                        BackgroundColor="#0080ff"
+                        CornerRadius="10"
+                        HasShadow="True"
+                        OutlineColor="Silver">
                         <RelativeLayout>
-                            <Label 
-                                Text="This is Front View" 
+                            <Label
                                 FontSize="Large"
-                                HorizontalTextAlignment="Center" 
-                                VerticalTextAlignment="Center"
-                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
-                            </Label>
-                            <Label 
-                                HorizontalTextAlignment="Center"  
-                                FontSize="Large" Margin="20"
-                                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
-                            </Label>
+                                HorizontalTextAlignment="Center"
+                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                       Property=Height,
+                                                                                       Factor=0.5}"
+                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                      Property=Width}"
+                                Text="This is Front View"
+                                VerticalTextAlignment="Center" />
+                            <Label
+                                Margin="20"
+                                FontSize="Large"
+                                HorizontalTextAlignment="Center"
+                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                      Property=Width}"
+                                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                  Property=Height,
+                                                                                  Factor=0.5}" />
                         </RelativeLayout>
                     </Frame>
                 </xfFlipViewControl:XFFlipView.FrontView>
 
                 <xfFlipViewControl:XFFlipView.BackView>
-                    <Frame CornerRadius="10" HasShadow="True" Padding="0" Margin="10" 
-                           OutlineColor="Silver" BackgroundColor="#ff0080">
+                    <Frame
+                        Margin="10"
+                        Padding="0"
+                        BackgroundColor="#ff0080"
+                        CornerRadius="10"
+                        HasShadow="True"
+                        OutlineColor="Silver">
                         <RelativeLayout>
-                            <Label 
-                                Text="This is Back View"  
+                            <Label
                                 FontSize="Large"
-                                HorizontalTextAlignment="Center" 
-                                VerticalTextAlignment="Center"
-                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
-                            </Label>
-                            <Label   
-                                HorizontalTextAlignment="Center" 
-                                FontSize="Large" Margin="20"
-                                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
-                            </Label>
-                        </RelativeLayout>
-                    </Frame>
-                </xfFlipViewControl:XFFlipView.BackView>
-                
-            </xfFlipViewControl:XFFlipView>
-
-            <xfFlipViewControl:XFFlipView 
-                x:Name="XFFlipViewControl2" Grid.Row="1" Grid.Column="0" >
-
-                <xfFlipViewControl:XFFlipView.FrontView>
-                    <Frame CornerRadius="10" HasShadow="True" Padding="0" Margin="10" 
-                           OutlineColor="Silver" BackgroundColor="#0080ff">
-                        <RelativeLayout>
-                            <Label 
-                                Text="This is Front View" 
+                                HorizontalTextAlignment="Center"
+                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                       Property=Height,
+                                                                                       Factor=0.5}"
+                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                      Property=Width}"
+                                Text="This is Back View"
+                                VerticalTextAlignment="Center" />
+                            <Label
+                                Margin="20"
                                 FontSize="Large"
-                                HorizontalTextAlignment="Center" 
-                                VerticalTextAlignment="Center"
-                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
-                            </Label>
-                            <Label 
-                                HorizontalTextAlignment="Center"  
-                                FontSize="Large" Margin="20"
-                                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
-                            </Label>
-                        </RelativeLayout>
-                    </Frame>
-                </xfFlipViewControl:XFFlipView.FrontView>
-
-                <xfFlipViewControl:XFFlipView.BackView>
-                    <Frame CornerRadius="10" HasShadow="True" Padding="0" Margin="10" 
-                           OutlineColor="Silver" BackgroundColor="#ff0080">
-                        <RelativeLayout>
-                            <Label 
-                                Text="This is Back View"  
-                                FontSize="Large"
-                                HorizontalTextAlignment="Center" 
-                                VerticalTextAlignment="Center"
-                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
-                            </Label>
-                            <Label   
-                                HorizontalTextAlignment="Center" 
-                                FontSize="Large" Margin="20"
-                                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
-                            </Label>
+                                HorizontalTextAlignment="Center"
+                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                      Property=Width}"
+                                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                  Property=Height,
+                                                                                  Factor=0.5}" />
                         </RelativeLayout>
                     </Frame>
                 </xfFlipViewControl:XFFlipView.BackView>
 
             </xfFlipViewControl:XFFlipView>
 
-            <xfFlipViewControl:XFFlipView 
-                x:Name="XFFlipViewControl3"  Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" >
+            <xfFlipViewControl:XFFlipView
+                x:Name="XFFlipViewControl2"
+                Grid.Row="1"
+                Grid.Column="0">
 
                 <xfFlipViewControl:XFFlipView.FrontView>
-                    <Frame CornerRadius="10" HasShadow="True" Padding="0" Margin="10" 
-                           OutlineColor="Silver" BackgroundColor="#0080ff">
+                    <Frame
+                        Margin="10"
+                        Padding="0"
+                        BackgroundColor="#0080ff"
+                        CornerRadius="10"
+                        HasShadow="True"
+                        OutlineColor="Silver">
                         <RelativeLayout>
-                            <Label 
-                                Text="This is Front View" 
+                            <Label
                                 FontSize="Large"
-                                HorizontalTextAlignment="Center" 
-                                VerticalTextAlignment="Center"
-                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
-                            </Label>
-                            <Label 
-                                HorizontalTextAlignment="Center"  
-                                FontSize="Large" Margin="20"
-                                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
-                            </Label>
+                                HorizontalTextAlignment="Center"
+                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                       Property=Height,
+                                                                                       Factor=0.5}"
+                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                      Property=Width}"
+                                Text="This is Front View"
+                                VerticalTextAlignment="Center" />
+                            <Label
+                                Margin="20"
+                                FontSize="Large"
+                                HorizontalTextAlignment="Center"
+                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                      Property=Width}"
+                                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                  Property=Height,
+                                                                                  Factor=0.5}" />
                         </RelativeLayout>
                     </Frame>
                 </xfFlipViewControl:XFFlipView.FrontView>
 
                 <xfFlipViewControl:XFFlipView.BackView>
-                    <Frame CornerRadius="10" HasShadow="True" Padding="0" Margin="10" 
-                           OutlineColor="Silver" BackgroundColor="#ff0080">
+                    <Frame
+                        Margin="10"
+                        Padding="0"
+                        BackgroundColor="#ff0080"
+                        CornerRadius="10"
+                        HasShadow="True"
+                        OutlineColor="Silver">
                         <RelativeLayout>
-                            <Label 
-                                Text="This is Back View"  
+                            <Label
                                 FontSize="Large"
-                                HorizontalTextAlignment="Center" 
-                                VerticalTextAlignment="Center"
-                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
-                            </Label>
-                            <Label   
-                                HorizontalTextAlignment="Center" 
-                                FontSize="Large" Margin="20"
-                                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
-                            </Label>
+                                HorizontalTextAlignment="Center"
+                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                       Property=Height,
+                                                                                       Factor=0.5}"
+                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                      Property=Width}"
+                                Text="This is Back View"
+                                VerticalTextAlignment="Center" />
+                            <Label
+                                Margin="20"
+                                FontSize="Large"
+                                HorizontalTextAlignment="Center"
+                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                      Property=Width}"
+                                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                  Property=Height,
+                                                                                  Factor=0.5}" />
                         </RelativeLayout>
                     </Frame>
                 </xfFlipViewControl:XFFlipView.BackView>
 
             </xfFlipViewControl:XFFlipView>
 
-            <xfFlipViewControl:XFFlipView 
-                x:Name="XFFlipViewControl4"  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" >
+            <xfFlipViewControl:XFFlipView
+                x:Name="XFFlipViewControl3"
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Grid.Column="1">
 
                 <xfFlipViewControl:XFFlipView.FrontView>
-                    <Frame CornerRadius="10" HasShadow="True" Padding="0" Margin="10" 
-                           OutlineColor="Silver" BackgroundColor="#0080ff">
+                    <Frame
+                        Margin="10"
+                        Padding="0"
+                        BackgroundColor="#0080ff"
+                        CornerRadius="10"
+                        HasShadow="True"
+                        OutlineColor="Silver">
                         <RelativeLayout>
-                            <Label 
-                                Text="This is Front View" 
+                            <Label
                                 FontSize="Large"
-                                HorizontalTextAlignment="Center" 
-                                VerticalTextAlignment="Center"
-                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
-                            </Label>
-                            <Label 
-                                HorizontalTextAlignment="Center"  
-                                FontSize="Large" Margin="20"
-                                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
-                            </Label>
+                                HorizontalTextAlignment="Center"
+                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                       Property=Height,
+                                                                                       Factor=0.5}"
+                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                      Property=Width}"
+                                Text="This is Front View"
+                                VerticalTextAlignment="Center" />
+                            <Label
+                                Margin="20"
+                                FontSize="Large"
+                                HorizontalTextAlignment="Center"
+                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                      Property=Width}"
+                                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                  Property=Height,
+                                                                                  Factor=0.5}" />
                         </RelativeLayout>
                     </Frame>
                 </xfFlipViewControl:XFFlipView.FrontView>
 
                 <xfFlipViewControl:XFFlipView.BackView>
-                    <Frame CornerRadius="10" HasShadow="True" Padding="0" Margin="10" 
-                           OutlineColor="Silver" BackgroundColor="#ff0080">
+                    <Frame
+                        Margin="10"
+                        Padding="0"
+                        BackgroundColor="#ff0080"
+                        CornerRadius="10"
+                        HasShadow="True"
+                        OutlineColor="Silver">
                         <RelativeLayout>
-                            <Label 
-                                Text="This is Back View"  
+                            <Label
                                 FontSize="Large"
-                                HorizontalTextAlignment="Center" 
-                                VerticalTextAlignment="Center"
-                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
-                            </Label>
-                            <Label   
-                                HorizontalTextAlignment="Center" 
-                                FontSize="Large" Margin="20"
-                                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
-                            </Label>
+                                HorizontalTextAlignment="Center"
+                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                       Property=Height,
+                                                                                       Factor=0.5}"
+                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                      Property=Width}"
+                                Text="This is Back View"
+                                VerticalTextAlignment="Center" />
+                            <Label
+                                Margin="20"
+                                FontSize="Large"
+                                HorizontalTextAlignment="Center"
+                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                      Property=Width}"
+                                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                  Property=Height,
+                                                                                  Factor=0.5}" />
                         </RelativeLayout>
                     </Frame>
                 </xfFlipViewControl:XFFlipView.BackView>
 
             </xfFlipViewControl:XFFlipView>
 
-            <Button Text="Flip em!" Clicked="FlippedButton_OnClicked"
-                    Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" />
+            <xfFlipViewControl:XFFlipView
+                x:Name="XFFlipViewControl4"
+                Grid.Row="2"
+                Grid.Column="0"
+                Grid.ColumnSpan="2">
+
+                <xfFlipViewControl:XFFlipView.FrontView>
+                    <Frame
+                        Margin="10"
+                        Padding="0"
+                        BackgroundColor="#0080ff"
+                        CornerRadius="10"
+                        HasShadow="True"
+                        OutlineColor="Silver">
+                        <RelativeLayout>
+                            <Label
+                                FontSize="Large"
+                                HorizontalTextAlignment="Center"
+                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                       Property=Height,
+                                                                                       Factor=0.5}"
+                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                      Property=Width}"
+                                Text="This is Front View"
+                                VerticalTextAlignment="Center" />
+                            <Label
+                                Margin="20"
+                                FontSize="Large"
+                                HorizontalTextAlignment="Center"
+                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                      Property=Width}"
+                                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                  Property=Height,
+                                                                                  Factor=0.5}" />
+                        </RelativeLayout>
+                    </Frame>
+                </xfFlipViewControl:XFFlipView.FrontView>
+
+                <xfFlipViewControl:XFFlipView.BackView>
+                    <Frame
+                        Margin="10"
+                        Padding="0"
+                        BackgroundColor="#ff0080"
+                        CornerRadius="10"
+                        HasShadow="True"
+                        OutlineColor="Silver">
+                        <RelativeLayout>
+                            <Label
+                                FontSize="Large"
+                                HorizontalTextAlignment="Center"
+                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                       Property=Height,
+                                                                                       Factor=0.5}"
+                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                      Property=Width}"
+                                Text="This is Back View"
+                                VerticalTextAlignment="Center" />
+                            <Label
+                                Margin="20"
+                                FontSize="Large"
+                                HorizontalTextAlignment="Center"
+                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                      Property=Width}"
+                                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                                  Property=Height,
+                                                                                  Factor=0.5}" />
+                        </RelativeLayout>
+                    </Frame>
+                </xfFlipViewControl:XFFlipView.BackView>
+
+            </xfFlipViewControl:XFFlipView>
+
+            <Button
+                Grid.Row="3"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Clicked="FlippedButton_OnClicked"
+                Text="Flip em!" />
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.5*" ></ColumnDefinition>
-                <ColumnDefinition Width="0.5*" ></ColumnDefinition>
+                <ColumnDefinition Width="0.5*" />
+                <ColumnDefinition Width="0.5*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="0.3*" ></RowDefinition>
-                <RowDefinition Height="0.3*" ></RowDefinition>
-                <RowDefinition Height="0.3*" ></RowDefinition>
-                <RowDefinition Height="0.1*" ></RowDefinition>
+                <RowDefinition Height="0.3*" />
+                <RowDefinition Height="0.3*" />
+                <RowDefinition Height="0.3*" />
+                <RowDefinition Height="0.1*" />
             </Grid.RowDefinitions>
         </Grid>
     </ContentPage.Content>

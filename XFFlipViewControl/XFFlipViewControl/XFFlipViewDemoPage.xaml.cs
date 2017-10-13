@@ -34,9 +34,9 @@ namespace XFFlipViewControl
             Device.StartTimer(TimeSpan.FromSeconds(1),
                 () =>
                 {
-                    frontViewTimeLabel.Text = $"Timestamp: {DateTime.Now.ToString("F")}";
+                    frontViewTimeLabel.Text = $"{DateTime.Now.ToString("F")}";
 
-                    backViewTimeLabel.Text = $"Timestamp: {DateTime.Now.ToString("F")}";
+                    backViewTimeLabel.Text = $"{DateTime.Now.ToString("F")}";
 
                     return true;
                 });
