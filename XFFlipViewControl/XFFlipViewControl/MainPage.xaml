@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			 xmlns:local="clr-namespace:XFFlipViewControl"
-			 x:Class="XFFlipViewControl.MainPage">
+<ContentPage
+    x:Class="XFFlipViewControl.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:XFFlipViewControl">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
             <OnPlatform.iOS>
@@ -13,24 +14,30 @@
 
     <Grid>
 
-        <Button x:Name="flipViewDemoButton" 
-                Text="Flippable View Demo" Grid.Row="1"
-                Clicked="flipViewDemoButton_OnClicked" />
+        <Button
+            x:Name="flipViewDemoButton"
+            Grid.Row="1"
+            Clicked="flipViewDemoButton_OnClicked"
+            Text="Flippable View Demo" />
 
-        <Button x:Name="xfFlipAnimationButton" 
-                Text="Xamarin Forms Flippable View" Grid.Row="2"
-                Clicked="xfFlipAnimationButton_OnClicked" />
-        
-        <Button x:Name="xnFlipAnimationButton" 
-                Text="Xamarin Native Flippable View" Grid.Row="3"
-                Clicked="xnFlipAnimationButton_OnClicked" />
+        <Button
+            x:Name="xfFlipAnimationButton"
+            Grid.Row="2"
+            Clicked="xfFlipAnimationButton_OnClicked"
+            Text="Xamarin Forms Flippable View" />
+
+        <Button
+            x:Name="xnFlipAnimationButton"
+            Grid.Row="3"
+            Clicked="xnFlipAnimationButton_OnClicked"
+            Text="Xamarin Native Flippable View" />
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="*" ></RowDefinition>
-            <RowDefinition Height="50" ></RowDefinition>
-            <RowDefinition Height="50" ></RowDefinition>
-            <RowDefinition Height="50" ></RowDefinition>
-            <RowDefinition Height="*" ></RowDefinition>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
     </Grid>
 

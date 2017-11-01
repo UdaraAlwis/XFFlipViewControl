@@ -19,7 +19,9 @@
             HorizontalTextAlignment="Center"
             Text="Animated Flip View with pure Xamarin Forms!" />
 
-        <xfFlipViewControl:XFFlipView x:Name="XFFlipViewControl1" Grid.Row="1">
+        <xfFlipViewControl:XFFlipView
+            x:Name="XFFlipViewControl1"
+            Grid.Row="1" >
 
             <xfFlipViewControl:XFFlipView.FrontView>
                 <Frame
