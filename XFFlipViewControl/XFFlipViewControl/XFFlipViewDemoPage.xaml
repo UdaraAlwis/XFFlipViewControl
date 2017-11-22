@@ -19,9 +19,7 @@
             HorizontalTextAlignment="Center"
             Text="Animated Flip View with pure Xamarin Forms!" />
 
-        <xfFlipViewControl:XFFlipView
-            x:Name="XFFlipViewControl1"
-            Grid.Row="1" >
+        <xfFlipViewControl:XFFlipView x:Name="XFFlipViewControl1" Grid.Row="1">
 
             <xfFlipViewControl:XFFlipView.FrontView>
                 <Frame
@@ -37,23 +35,41 @@
                             FontSize="Large"
                             HorizontalTextAlignment="Center"
                             Text="This is Front View"
+                            TextColor="White"
                             VerticalTextAlignment="Center" />
 
-                        <Image
+                        <Label
                             Grid.Row="1"
-                            Source="{xfFlipViewControl:ImageResource XFFlipViewControl.Resources.monkey1.png}"
-                            VerticalOptions="CenterAndExpand" />
+                            FontAttributes="Italic"
+                            HorizontalTextAlignment="Center"
+                            Text="Anything could go here..."
+                            TextColor="White" />
+
+                        <Button
+                            Grid.Row="2"
+                            HorizontalOptions="Center"
+                            Text="Anything?" />
+
+                        <Entry
+                            Grid.Row="3"
+                            Margin="20,0,20,0"
+                            HorizontalTextAlignment="Center"
+                            Placeholder="Yes anything..." />
 
                         <Label
                             x:Name="frontViewTimeLabel"
-                            Grid.Row="2"
-                            Margin="20"
-                            FontSize="Large"
-                            HorizontalTextAlignment="Center" />
+                            Grid.Row="4"
+                            Margin="20,0,20,0"
+                            FontAttributes="Bold"
+                            FontSize="Medium"
+                            HorizontalTextAlignment="Center"
+                            TextColor="White" />
 
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
-                            <RowDefinition Height="200" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                     </Grid>
