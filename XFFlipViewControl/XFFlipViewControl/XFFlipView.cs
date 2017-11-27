@@ -126,7 +126,7 @@ namespace XFFlipViewControl
                 ((XFFlipView)bindable).FlipFromBackToFront();
             }
         }
-
+        
         /// <summary>
         /// Performs the flip
         /// </summary>
@@ -159,6 +159,8 @@ namespace XFFlipViewControl
 
         private async Task<bool> FrontToBackRotate()
         {
+            ViewExtensions.CancelAnimations(this);
+
             this.RotationY = 360;
 
             await this.RotateYTo(270, 500, Easing.Linear);

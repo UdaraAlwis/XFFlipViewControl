@@ -21,7 +21,9 @@ namespace XFFlipViewControl
 
         private void flipItButton_OnClicked(object sender, EventArgs e)
         {
+            flipItButton.IsEnabled = false;
             XFFlipViewControl1.IsFlipped = !XFFlipViewControl1.IsFlipped;
+            flipItButton.IsEnabled = true;
         }
 
         private void moreButton_OnClicked(object sender, EventArgs e)

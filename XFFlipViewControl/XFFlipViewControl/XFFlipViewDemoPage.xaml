@@ -29,7 +29,7 @@
                     CornerRadius="10"
                     HasShadow="True"
                     OutlineColor="Silver">
-                    <Grid VerticalOptions="CenterAndExpand">
+                    <Grid RowSpacing="5" VerticalOptions="CenterAndExpand">
                         <Label
                             Grid.Row="0"
                             FontSize="Large"
@@ -38,27 +38,14 @@
                             TextColor="White"
                             VerticalTextAlignment="Center" />
 
-                        <Label
+                        <Image
                             Grid.Row="1"
-                            FontAttributes="Italic"
-                            HorizontalTextAlignment="Center"
-                            Text="Anything could go here..."
-                            TextColor="White" />
-
-                        <Button
-                            Grid.Row="2"
-                            HorizontalOptions="Center"
-                            Text="Anything?" />
-
-                        <Entry
-                            Grid.Row="3"
-                            Margin="20,0,20,0"
-                            HorizontalTextAlignment="Center"
-                            Placeholder="Yes anything..." />
+                            Source="{xfFlipViewControl:ImageResource XFFlipViewControl.Resources.monkey1.png}"
+                            VerticalOptions="CenterAndExpand" />
 
                         <Label
                             x:Name="frontViewTimeLabel"
-                            Grid.Row="4"
+                            Grid.Row="2"
                             Margin="20,0,20,0"
                             FontAttributes="Bold"
                             FontSize="Medium"
@@ -67,9 +54,7 @@
 
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="150" />
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                     </Grid>
@@ -84,12 +69,13 @@
                     CornerRadius="10"
                     HasShadow="True"
                     OutlineColor="Silver">
-                    <Grid VerticalOptions="CenterAndExpand">
+                    <Grid RowSpacing="5" VerticalOptions="CenterAndExpand">
                         <Label
                             Grid.Row="0"
                             FontSize="Large"
                             HorizontalTextAlignment="Center"
                             Text="This is Back View"
+                            TextColor="White"
                             VerticalTextAlignment="Center" />
 
                         <Image
@@ -100,13 +86,15 @@
                         <Label
                             x:Name="backViewTimeLabel"
                             Grid.Row="2"
-                            Margin="20"
-                            FontSize="Large"
-                            HorizontalTextAlignment="Center" />
+                            Margin="20,0,20,0"
+                            FontAttributes="Bold"
+                            FontSize="Medium"
+                            HorizontalTextAlignment="Center"
+                            TextColor="White" />
 
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
-                            <RowDefinition Height="200" />
+                            <RowDefinition Height="150" />
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                     </Grid>
