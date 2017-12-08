@@ -155,7 +155,7 @@ namespace XFFlipViewControl
             await BackToFrontRotate();
         }
         
-        #region iOS Animation Stuff
+        #region Animation Stuff
 
         private async Task<bool> FrontToBackRotate()
         {
