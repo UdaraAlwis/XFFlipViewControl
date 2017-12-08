@@ -14,11 +14,6 @@ namespace XFFlipViewControl
             InitializeComponent();
         }
 
-        private void flipViewDemoButton_OnClicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new DemoPage());
-        }
-
         private void xfFlipAnimationButton_OnClicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new XFFlipViewDemoPage());
@@ -27,6 +22,17 @@ namespace XFFlipViewControl
         private void xnFlipAnimationButton_OnClicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new XNFlipViewDemoPage());
+        }
+
+
+        private void flipViewDemo1Button_OnClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new DemoPage1());
+        }
+
+        private void flipViewDemo2Button_OnClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new DemoPage2());
         }
     }
 }

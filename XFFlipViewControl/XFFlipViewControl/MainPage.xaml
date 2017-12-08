@@ -3,7 +3,8 @@
     x:Class="XFFlipViewControl.MainPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:XFFlipViewControl">
+    xmlns:local="clr-namespace:XFFlipViewControl"
+    Title="Flipity Flippy Flip">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
             <OnPlatform.iOS>
@@ -15,26 +16,40 @@
     <Grid>
 
         <Button
-            x:Name="flipViewDemoButton"
-            Grid.Row="1"
-            Clicked="flipViewDemoButton_OnClicked"
-            Text="Flippable View Demo" />
-
-        <Button
             x:Name="xfFlipAnimationButton"
-            Grid.Row="2"
+            Grid.Row="1"
             Clicked="xfFlipAnimationButton_OnClicked"
             Text="Xamarin Forms Flippable View" />
 
         <Button
             x:Name="xnFlipAnimationButton"
-            Grid.Row="3"
+            Grid.Row="2"
             Clicked="xnFlipAnimationButton_OnClicked"
             Text="Xamarin Native Flippable View" />
+
+        <BoxView
+            Grid.Row="3"
+            Margin="20,10,20,10"
+            BackgroundColor="DodgerBlue"
+            HeightRequest="0.5" />
+
+        <Button
+            x:Name="flipViewDemo1Button"
+            Grid.Row="4"
+            Clicked="flipViewDemo1Button_OnClicked"
+            Text="Flipity Flip Xamarin Forms" />
+
+        <Button
+            x:Name="flipViewDemo2Button"
+            Grid.Row="5"
+            Clicked="flipViewDemo2Button_OnClicked"
+            Text="Flipity Flip Xamarin Native" />
 
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="50" />
             <RowDefinition Height="50" />
             <RowDefinition Height="*" />
