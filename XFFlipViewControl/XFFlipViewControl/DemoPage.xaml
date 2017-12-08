@@ -27,30 +27,14 @@
                         CornerRadius="10"
                         HasShadow="True"
                         OutlineColor="Silver">
-                        <RelativeLayout>
-                            <Label
-                                FontSize="Large"
-                                HorizontalTextAlignment="Center"
-                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                       Property=Height,
-                                                                                       Factor=0.5}"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                      Property=Width}"
-                                Text="This is Front View"
-                                VerticalTextAlignment="Center" />
-                            <Label
-                                Margin="20"
-                                FontSize="Large"
-                                HorizontalTextAlignment="Center"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                      Property=Width}"
-                                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                  Property=Height,
-                                                                                  Factor=0.5}" />
-                        </RelativeLayout>
+                        <Grid>
+                            <Image
+                                Aspect="AspectFit" HeightRequest="100"
+                                Source="{xfFlipViewControl:ImageResource XFFlipViewControl.Resources.monkey.png}"
+                                VerticalOptions="CenterAndExpand" />
+                        </Grid>
                     </Frame>
                 </xfFlipViewControl:XFFlipView.FrontView>
-
                 <xfFlipViewControl:XFFlipView.BackView>
                     <Frame
                         Margin="10"
@@ -59,27 +43,12 @@
                         CornerRadius="10"
                         HasShadow="True"
                         OutlineColor="Silver">
-                        <RelativeLayout>
-                            <Label
-                                FontSize="Large"
-                                HorizontalTextAlignment="Center"
-                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                       Property=Height,
-                                                                                       Factor=0.5}"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                      Property=Width}"
-                                Text="This is Back View"
-                                VerticalTextAlignment="Center" />
-                            <Label
-                                Margin="20"
-                                FontSize="Large"
-                                HorizontalTextAlignment="Center"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                      Property=Width}"
-                                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                  Property=Height,
-                                                                                  Factor=0.5}" />
-                        </RelativeLayout>
+                        <Grid>
+                            <Image
+                                Aspect="AspectFit" HeightRequest="100"
+                                Source="{xfFlipViewControl:ImageResource XFFlipViewControl.Resources.panda.png}"
+                                VerticalOptions="CenterAndExpand" />
+                        </Grid>
                     </Frame>
                 </xfFlipViewControl:XFFlipView.BackView>
 
@@ -98,30 +67,14 @@
                         CornerRadius="10"
                         HasShadow="True"
                         OutlineColor="Silver">
-                        <RelativeLayout>
-                            <Label
-                                FontSize="Large"
-                                HorizontalTextAlignment="Center"
-                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                       Property=Height,
-                                                                                       Factor=0.5}"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                      Property=Width}"
-                                Text="This is Front View"
-                                VerticalTextAlignment="Center" />
-                            <Label
-                                Margin="20"
-                                FontSize="Large"
-                                HorizontalTextAlignment="Center"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                      Property=Width}"
-                                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                  Property=Height,
-                                                                                  Factor=0.5}" />
-                        </RelativeLayout>
+                        <Grid>
+                            <Image
+                                Aspect="AspectFit" HeightRequest="100"
+                                Source="{xfFlipViewControl:ImageResource XFFlipViewControl.Resources.monkey.png}"
+                                VerticalOptions="CenterAndExpand" />
+                        </Grid>
                     </Frame>
                 </xfFlipViewControl:XFFlipView.FrontView>
-
                 <xfFlipViewControl:XFFlipView.BackView>
                     <Frame
                         Margin="10"
@@ -130,27 +83,12 @@
                         CornerRadius="10"
                         HasShadow="True"
                         OutlineColor="Silver">
-                        <RelativeLayout>
-                            <Label
-                                FontSize="Large"
-                                HorizontalTextAlignment="Center"
-                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                       Property=Height,
-                                                                                       Factor=0.5}"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                      Property=Width}"
-                                Text="This is Back View"
-                                VerticalTextAlignment="Center" />
-                            <Label
-                                Margin="20"
-                                FontSize="Large"
-                                HorizontalTextAlignment="Center"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                      Property=Width}"
-                                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                  Property=Height,
-                                                                                  Factor=0.5}" />
-                        </RelativeLayout>
+                        <Grid>
+                            <Image
+                                Aspect="AspectFit" HeightRequest="100"
+                                Source="{xfFlipViewControl:ImageResource XFFlipViewControl.Resources.panda.png}"
+                                VerticalOptions="CenterAndExpand" />
+                        </Grid>
                     </Frame>
                 </xfFlipViewControl:XFFlipView.BackView>
 
@@ -170,30 +108,14 @@
                         CornerRadius="10"
                         HasShadow="True"
                         OutlineColor="Silver">
-                        <RelativeLayout>
-                            <Label
-                                FontSize="Large"
-                                HorizontalTextAlignment="Center"
-                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                       Property=Height,
-                                                                                       Factor=0.5}"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                      Property=Width}"
-                                Text="This is Front View"
-                                VerticalTextAlignment="Center" />
-                            <Label
-                                Margin="20"
-                                FontSize="Large"
-                                HorizontalTextAlignment="Center"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                      Property=Width}"
-                                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                  Property=Height,
-                                                                                  Factor=0.5}" />
-                        </RelativeLayout>
+                        <Grid>
+                            <Image
+                                Aspect="AspectFit" HeightRequest="100"
+                                Source="{xfFlipViewControl:ImageResource XFFlipViewControl.Resources.monkey.png}"
+                                VerticalOptions="CenterAndExpand" />
+                        </Grid>
                     </Frame>
                 </xfFlipViewControl:XFFlipView.FrontView>
-
                 <xfFlipViewControl:XFFlipView.BackView>
                     <Frame
                         Margin="10"
@@ -202,27 +124,12 @@
                         CornerRadius="10"
                         HasShadow="True"
                         OutlineColor="Silver">
-                        <RelativeLayout>
-                            <Label
-                                FontSize="Large"
-                                HorizontalTextAlignment="Center"
-                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                       Property=Height,
-                                                                                       Factor=0.5}"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                      Property=Width}"
-                                Text="This is Back View"
-                                VerticalTextAlignment="Center" />
-                            <Label
-                                Margin="20"
-                                FontSize="Large"
-                                HorizontalTextAlignment="Center"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                      Property=Width}"
-                                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                  Property=Height,
-                                                                                  Factor=0.5}" />
-                        </RelativeLayout>
+                        <Grid>
+                            <Image
+                                Aspect="AspectFit" HeightRequest="100"
+                                Source="{xfFlipViewControl:ImageResource XFFlipViewControl.Resources.panda.png}"
+                                VerticalOptions="CenterAndExpand" />
+                        </Grid>
                     </Frame>
                 </xfFlipViewControl:XFFlipView.BackView>
 
@@ -242,30 +149,14 @@
                         CornerRadius="10"
                         HasShadow="True"
                         OutlineColor="Silver">
-                        <RelativeLayout>
-                            <Label
-                                FontSize="Large"
-                                HorizontalTextAlignment="Center"
-                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                       Property=Height,
-                                                                                       Factor=0.5}"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                      Property=Width}"
-                                Text="This is Front View"
-                                VerticalTextAlignment="Center" />
-                            <Label
-                                Margin="20"
-                                FontSize="Large"
-                                HorizontalTextAlignment="Center"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                      Property=Width}"
-                                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                  Property=Height,
-                                                                                  Factor=0.5}" />
-                        </RelativeLayout>
+                        <Grid>
+                            <Image
+                                Aspect="AspectFit" HeightRequest="100"
+                                Source="{xfFlipViewControl:ImageResource XFFlipViewControl.Resources.monkey.png}"
+                                VerticalOptions="CenterAndExpand" />
+                        </Grid>
                     </Frame>
                 </xfFlipViewControl:XFFlipView.FrontView>
-
                 <xfFlipViewControl:XFFlipView.BackView>
                     <Frame
                         Margin="10"
@@ -274,27 +165,12 @@
                         CornerRadius="10"
                         HasShadow="True"
                         OutlineColor="Silver">
-                        <RelativeLayout>
-                            <Label
-                                FontSize="Large"
-                                HorizontalTextAlignment="Center"
-                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                       Property=Height,
-                                                                                       Factor=0.5}"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                      Property=Width}"
-                                Text="This is Back View"
-                                VerticalTextAlignment="Center" />
-                            <Label
-                                Margin="20"
-                                FontSize="Large"
-                                HorizontalTextAlignment="Center"
-                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                      Property=Width}"
-                                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                                  Property=Height,
-                                                                                  Factor=0.5}" />
-                        </RelativeLayout>
+                        <Grid>
+                            <Image
+                                Aspect="AspectFit" HeightRequest="100"
+                                Source="{xfFlipViewControl:ImageResource XFFlipViewControl.Resources.panda.png}"
+                                VerticalOptions="CenterAndExpand" />
+                        </Grid>
                     </Frame>
                 </xfFlipViewControl:XFFlipView.BackView>
 

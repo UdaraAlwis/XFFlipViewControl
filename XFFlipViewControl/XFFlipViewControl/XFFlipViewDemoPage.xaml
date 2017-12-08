@@ -3,7 +3,8 @@
     x:Class="XFFlipViewControl.XFFlipViewDemoPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:xfFlipViewControl="clr-namespace:XFFlipViewControl;assembly=XFFlipViewControl">
+    xmlns:xfFlipViewControl="clr-namespace:XFFlipViewControl;assembly=XFFlipViewControl"
+    Title="with Xamarin.Forms">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
             <OnPlatform.iOS>
@@ -32,15 +33,18 @@
                     <Grid RowSpacing="5" VerticalOptions="CenterAndExpand">
                         <Label
                             Grid.Row="0"
+                            FontAttributes="Bold"
                             FontSize="Large"
                             HorizontalTextAlignment="Center"
-                            Text="This is Front View"
+                            Text="this is front view"
                             TextColor="White"
                             VerticalTextAlignment="Center" />
 
                         <Image
                             Grid.Row="1"
-                            Source="{xfFlipViewControl:ImageResource XFFlipViewControl.Resources.monkey1.png}"
+                            Aspect="AspectFit"
+                            HeightRequest="100"
+                            Source="{xfFlipViewControl:ImageResource XFFlipViewControl.Resources.monkey.png}"
                             VerticalOptions="CenterAndExpand" />
 
                         <Label
@@ -48,7 +52,7 @@
                             Grid.Row="2"
                             Margin="20,0,20,0"
                             FontAttributes="Bold"
-                            FontSize="Medium"
+                            FontSize="Large"
                             HorizontalTextAlignment="Center"
                             TextColor="White" />
 
@@ -72,15 +76,18 @@
                     <Grid RowSpacing="5" VerticalOptions="CenterAndExpand">
                         <Label
                             Grid.Row="0"
+                            FontAttributes="Bold"
                             FontSize="Large"
                             HorizontalTextAlignment="Center"
-                            Text="This is Back View"
+                            Text="this is back view"
                             TextColor="White"
                             VerticalTextAlignment="Center" />
 
                         <Image
                             Grid.Row="1"
-                            Source="{xfFlipViewControl:ImageResource XFFlipViewControl.Resources.monkey2.png}"
+                            Aspect="AspectFit"
+                            HeightRequest="100"
+                            Source="{xfFlipViewControl:ImageResource XFFlipViewControl.Resources.panda.png}"
                             VerticalOptions="CenterAndExpand" />
 
                         <Label
@@ -88,7 +95,7 @@
                             Grid.Row="2"
                             Margin="20,0,20,0"
                             FontAttributes="Bold"
-                            FontSize="Medium"
+                            FontSize="Large"
                             HorizontalTextAlignment="Center"
                             TextColor="White" />
 
