@@ -28,7 +28,7 @@ namespace XFFlipViewControl
 
         private void moreButton_OnClicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new DemoPage1());
         }
 
         private void TimerRunner()
