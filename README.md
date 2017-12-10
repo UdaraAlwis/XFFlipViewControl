@@ -4,7 +4,7 @@ Let me create an awesomely animated Flippable View control with Xamarin.Forms! :
 
 Something that Flips! Flipity Flippy Flippin' Flip View right out of Xamarin.Forms yol! :D
 
-Check out the full blog article here: https://theconfuzedsourcecode.wordpress.com/
+Check out the full blog article here: https://theconfuzedsourcecode.wordpress.com/2017/12/10/its-a-flippin-flipity-flippable-view-in-xamarin-forms/
 
 <img src="https://github.com/UdaraAlwis/XFFlipViewControl/blob/master/screenshots/xfflipviewcontrolios.gif"  height="380" /> <img src="https://github.com/UdaraAlwis/XFFlipViewControl/blob/master/screenshots/xfflipviewcontrolandroid.gif"  height="380" /> 
 
