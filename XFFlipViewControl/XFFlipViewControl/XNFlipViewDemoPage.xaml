@@ -3,10 +3,131 @@
     x:Class="XFFlipViewControl.XNFlipViewDemoPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xfFlipViewControl="clr-namespace:XFFlipViewControl;assembly=XFFlipViewControl"
     Title="with Xamarin Native">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin Forms!" />
-        </StackLayout>
-    </ContentPage.Content>
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>
+                0, 20, 0, 0
+            </OnPlatform.iOS>
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <Grid>
+
+        <Label
+            FontSize="20"
+            HorizontalTextAlignment="Center"
+            Text="Animated Flip View with Xamarin Native!" />
+
+        <xfFlipViewControl:XNFlipView x:Name="XNFlipViewControl1" Grid.Row="1">
+
+            <xfFlipViewControl:XNFlipView.FrontView>
+                <Frame
+                    Margin="10"
+                    Padding="0"
+                    BackgroundColor="#0080ff"
+                    CornerRadius="10"
+                    HasShadow="True"
+                    OutlineColor="Silver">
+                    <Grid RowSpacing="5" VerticalOptions="CenterAndExpand">
+                        <Label
+                            Grid.Row="0"
+                            FontAttributes="Bold"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                            Text="this is front view"
+                            TextColor="White"
+                            VerticalTextAlignment="Center" />
+
+                        <Image
+                            Grid.Row="1"
+                            Aspect="AspectFit"
+                            HeightRequest="100"
+                            Source="{xfFlipViewControl:ImageResource XFFlipViewControl.Resources.monkey.png}"
+                            VerticalOptions="CenterAndExpand" />
+
+                        <Label
+                            x:Name="frontViewTimeLabel"
+                            Grid.Row="2"
+                            Margin="20,0,20,0"
+                            FontAttributes="Bold"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                            TextColor="White" />
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="150" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                    </Grid>
+                </Frame>
+            </xfFlipViewControl:XNFlipView.FrontView>
+
+            <xfFlipViewControl:XNFlipView.BackView>
+                <Frame
+                    Margin="10"
+                    Padding="0"
+                    BackgroundColor="#ff0080"
+                    CornerRadius="10"
+                    HasShadow="True"
+                    OutlineColor="Silver">
+                    <Grid RowSpacing="5" VerticalOptions="CenterAndExpand">
+                        <Label
+                            Grid.Row="0"
+                            FontAttributes="Bold"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                            Text="this is back view"
+                            TextColor="White"
+                            VerticalTextAlignment="Center" />
+
+                        <Image
+                            Grid.Row="1"
+                            Aspect="AspectFit"
+                            HeightRequest="100"
+                            Source="{xfFlipViewControl:ImageResource XFFlipViewControl.Resources.panda.png}"
+                            VerticalOptions="CenterAndExpand" />
+
+                        <Label
+                            x:Name="backViewTimeLabel"
+                            Grid.Row="2"
+                            Margin="20,0,20,0"
+                            FontAttributes="Bold"
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                            TextColor="White" />
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="150" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                    </Grid>
+                </Frame>
+            </xfFlipViewControl:XNFlipView.BackView>
+
+        </xfFlipViewControl:XNFlipView>
+
+        <Button
+            x:Name="moreButton"
+            Grid.Row="2"
+            Clicked="moreButton_OnClicked"
+            Text="more of this" />
+
+        <Button
+            x:Name="flipItButton"
+            Grid.Row="3"
+            Clicked="flipItButton_OnClicked"
+            Text="Flip it!" />
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+    </Grid>
+
 </ContentPage>
