@@ -3,6 +3,9 @@ using Xamarin.Forms;
 
 namespace XFFlipViewControl
 {
+    /// <summary>
+    /// Flip View Animation Control built with Xamarin Native Renderers
+    /// </summary>
     public class XNFlipView : ContentView
     {
         private readonly RelativeLayout _contentHolder;

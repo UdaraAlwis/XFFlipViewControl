@@ -23,9 +23,47 @@ namespace XFFlipViewControl.Droid
     {
         private float _cameraDistance;
 
+        private readonly ObjectAnimator _animateYAxis0To90;
+        private readonly ObjectAnimator _animateYAxis90To180;
+
         public XNFlipViewRenderer(Context context) : base(context)
         {
+            // Initiating the first half of the animation
+            _animateYAxis0To90 = ObjectAnimator.OfFloat(this, "RotationY", 0.0f, -90f);
+            _animateYAxis0To90.SetDuration(500);
+            _animateYAxis0To90.Update += (sender, args) =>
+            {
+                // On every animation Frame we have to update the Camera Distance since Xamarin overrides it somewhere
+                SetCameraDistance(_cameraDistance);
+            };
+            _animateYAxis0To90.AnimationEnd += (sender, args) =>
+            {
+                if (((XNFlipView)Element).IsFlipped)
+                {
+                    // Change the visible content
+                    ((XNFlipView)Element).FrontView.IsVisible = false;
+                    ((XNFlipView)Element).BackView.IsVisible = true;
+                }
+                else
+                {
+                    // Change the visible content
+                    ((XNFlipView)Element).BackView.IsVisible = false;
+                    ((XNFlipView)Element).FrontView.IsVisible = true;
+                }
 
+                this.RotationY = -270;
+
+                _animateYAxis90To180.Start();
+            };
+            
+            // Initiating the second half of the animation
+            _animateYAxis90To180 = ObjectAnimator.OfFloat(this, "RotationY", -270f, -360f);
+            _animateYAxis90To180.SetDuration(500);
+            _animateYAxis90To180.Update += (sender1, args1) =>
+            {
+                // On every animation Frame we have to update the Camera Distance since Xamarin overrides it somewhere
+                SetCameraDistance(_cameraDistance);
+            };
         }
 
         protected override void OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.View> e)
@@ -39,13 +77,6 @@ namespace XFFlipViewControl.Droid
                 var distance = 8000;
                 _cameraDistance = Context.Resources.DisplayMetrics.Density * distance;
             }
-
-            //    ((FilppableContentViewXF)e.NewElement).FlipThisShyiatFrontToBack
-            //        = AndroidNativeFlipFrontToBack(((FilppableContentViewXF)e.NewElement));
-
-            //    ((FilppableContentViewXF)e.NewElement).FlipThisShyiatBackToFront
-            //        = AndroidNativeFlipBackToFront(((FilppableContentViewXF)e.NewElement));
-            //}
         }
 
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -54,77 +85,20 @@ namespace XFFlipViewControl.Droid
 
             if (e.PropertyName == XNFlipView.IsFlippedProperty.PropertyName)
             {
-                if ( !((XNFlipView)sender).IsFlipped)
+                if (!((XNFlipView)sender).IsFlipped)
                 {
                     this.RotationY = 0;
                 }
 
-                AnimateFlipHorizontally((XNFlipView)sender, ((XNFlipView)sender).IsFlipped);
+                AnimateFlipHorizontally();
             }
         }
 
-        //private Command AndroidNativeFlipFrontToBack(FilppableContentViewXF newElementInstance)
-        //{
-        //    return new Command(() =>
-        //    {
-        //        AnimateFlipHorizontally(newElementInstance, true);
-        //    });
-        //}
-
-        //private Command AndroidNativeFlipBackToFront(FilppableContentViewXF newElementInstance)
-        //{
-        //    return new Command(() =>
-        //    {
-        //        this.RotationY = 0;
-
-        //        AnimateFlipHorizontally(newElementInstance, false);
-        //    });
-        //}
-
-        private void AnimateFlipHorizontally(XNFlipView newElementInstance, bool isFrontToBack)
+        private void AnimateFlipHorizontally()
         {
             SetCameraDistance(_cameraDistance);
 
-            ObjectAnimator animateYAxis0To90 = ObjectAnimator.OfFloat(this, "RotationY", 0.0f, -90f);
-            animateYAxis0To90.SetDuration(500);
-
-            animateYAxis0To90.Start();
-            animateYAxis0To90.Update += (sender, args) =>
-            {
-                // On every animation Frame we have to update the Camera Distance since Xamarin overrides it somewhere
-                SetCameraDistance(_cameraDistance);
-            };
-
-            animateYAxis0To90.AnimationEnd += (sender, args) =>
-            {
-                if (isFrontToBack)
-                {
-                    //newElementInstance.SwitchViewsFlipFromFrontToBack();
-
-                    // Change the visible content
-                    newElementInstance.FrontView.IsVisible = false;
-                    newElementInstance.BackView.IsVisible = true;
-                }
-                else
-                {
-                    //newElementInstance.SwitchViewsFlipFromBackToFront();
-
-                    // Change the visible content
-                    newElementInstance.BackView.IsVisible = false;
-                    newElementInstance.FrontView.IsVisible = true;
-                }
-
-                this.RotationY = -270;
-
-                ObjectAnimator animateYAxis90To180 = ObjectAnimator.OfFloat(this, "RotationY", -270f, -360f);
-                animateYAxis90To180.SetDuration(500);
-                animateYAxis90To180.Start();
-                animateYAxis90To180.Update += (sender1, args1) =>
-                {
-                    // On every animation Frame we have to update the Camera Distance since Xamarin overrides it somewhere
-                    SetCameraDistance(_cameraDistance);
-                };
-            };
+            _animateYAxis0To90.Start();
         }
     }
 }

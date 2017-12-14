@@ -3,13 +3,205 @@
     x:Class="XFFlipViewControl.DemoPage2"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xfFlipViewControl="clr-namespace:XFFlipViewControl;assembly=XFFlipViewControl"
     Title="Flipity Flip Xamarin Native">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>
+                0, 20, 0, 0
+            </OnPlatform.iOS>
+        </OnPlatform>
+    </ContentPage.Padding>
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label
-                HorizontalOptions="CenterAndExpand"
-                Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid>
+            <xfFlipViewControl:XNFlipView
+                x:Name="XFFlipViewControl1"
+                Grid.Row="0"
+                Grid.Column="0">
+
+                <xfFlipViewControl:XNFlipView.FrontView>
+                    <Frame
+                        Margin="10"
+                        Padding="0"
+                        BackgroundColor="#0080ff"
+                        CornerRadius="10"
+                        HasShadow="True"
+                        OutlineColor="Silver">
+                        <Grid>
+                            <Image
+                                Aspect="AspectFit"
+                                HeightRequest="100"
+                                Source="{xfFlipViewControl:ImageResource XFFlipViewControl.Resources.monkey.png}"
+                                VerticalOptions="CenterAndExpand" />
+                        </Grid>
+                    </Frame>
+                </xfFlipViewControl:XNFlipView.FrontView>
+                <xfFlipViewControl:XNFlipView.BackView>
+                    <Frame
+                        Margin="10"
+                        Padding="0"
+                        BackgroundColor="#ff0080"
+                        CornerRadius="10"
+                        HasShadow="True"
+                        OutlineColor="Silver">
+                        <Grid>
+                            <Image
+                                Aspect="AspectFit"
+                                HeightRequest="100"
+                                Source="{xfFlipViewControl:ImageResource XFFlipViewControl.Resources.panda.png}"
+                                VerticalOptions="CenterAndExpand" />
+                        </Grid>
+                    </Frame>
+                </xfFlipViewControl:XNFlipView.BackView>
+
+            </xfFlipViewControl:XNFlipView>
+
+            <xfFlipViewControl:XNFlipView
+                x:Name="XFFlipViewControl2"
+                Grid.Row="1"
+                Grid.Column="0">
+
+                <xfFlipViewControl:XNFlipView.FrontView>
+                    <Frame
+                        Margin="10"
+                        Padding="0"
+                        BackgroundColor="#0080ff"
+                        CornerRadius="10"
+                        HasShadow="True"
+                        OutlineColor="Silver">
+                        <Grid>
+                            <Image
+                                Aspect="AspectFit"
+                                HeightRequest="100"
+                                Source="{xfFlipViewControl:ImageResource XFFlipViewControl.Resources.monkey.png}"
+                                VerticalOptions="CenterAndExpand" />
+                        </Grid>
+                    </Frame>
+                </xfFlipViewControl:XNFlipView.FrontView>
+                <xfFlipViewControl:XNFlipView.BackView>
+                    <Frame
+                        Margin="10"
+                        Padding="0"
+                        BackgroundColor="#ff0080"
+                        CornerRadius="10"
+                        HasShadow="True"
+                        OutlineColor="Silver">
+                        <Grid>
+                            <Image
+                                Aspect="AspectFit"
+                                HeightRequest="100"
+                                Source="{xfFlipViewControl:ImageResource XFFlipViewControl.Resources.panda.png}"
+                                VerticalOptions="CenterAndExpand" />
+                        </Grid>
+                    </Frame>
+                </xfFlipViewControl:XNFlipView.BackView>
+
+            </xfFlipViewControl:XNFlipView>
+
+            <xfFlipViewControl:XNFlipView
+                x:Name="XFFlipViewControl3"
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Grid.Column="1">
+
+                <xfFlipViewControl:XNFlipView.FrontView>
+                    <Frame
+                        Margin="10"
+                        Padding="0"
+                        BackgroundColor="#0080ff"
+                        CornerRadius="10"
+                        HasShadow="True"
+                        OutlineColor="Silver">
+                        <Grid>
+                            <Image
+                                Aspect="AspectFit"
+                                HeightRequest="100"
+                                Source="{xfFlipViewControl:ImageResource XFFlipViewControl.Resources.monkey.png}"
+                                VerticalOptions="CenterAndExpand" />
+                        </Grid>
+                    </Frame>
+                </xfFlipViewControl:XNFlipView.FrontView>
+                <xfFlipViewControl:XNFlipView.BackView>
+                    <Frame
+                        Margin="10"
+                        Padding="0"
+                        BackgroundColor="#ff0080"
+                        CornerRadius="10"
+                        HasShadow="True"
+                        OutlineColor="Silver">
+                        <Grid>
+                            <Image
+                                Aspect="AspectFit"
+                                HeightRequest="100"
+                                Source="{xfFlipViewControl:ImageResource XFFlipViewControl.Resources.panda.png}"
+                                VerticalOptions="CenterAndExpand" />
+                        </Grid>
+                    </Frame>
+                </xfFlipViewControl:XNFlipView.BackView>
+
+            </xfFlipViewControl:XNFlipView>
+
+            <xfFlipViewControl:XNFlipView
+                x:Name="XFFlipViewControl4"
+                Grid.Row="2"
+                Grid.Column="0"
+                Grid.ColumnSpan="2">
+
+                <xfFlipViewControl:XNFlipView.FrontView>
+                    <Frame
+                        Margin="10"
+                        Padding="0"
+                        BackgroundColor="#0080ff"
+                        CornerRadius="10"
+                        HasShadow="True"
+                        OutlineColor="Silver">
+                        <Grid>
+                            <Image
+                                Aspect="AspectFit"
+                                HeightRequest="100"
+                                Source="{xfFlipViewControl:ImageResource XFFlipViewControl.Resources.monkey.png}"
+                                VerticalOptions="CenterAndExpand" />
+                        </Grid>
+                    </Frame>
+                </xfFlipViewControl:XNFlipView.FrontView>
+                <xfFlipViewControl:XNFlipView.BackView>
+                    <Frame
+                        Margin="10"
+                        Padding="0"
+                        BackgroundColor="#ff0080"
+                        CornerRadius="10"
+                        HasShadow="True"
+                        OutlineColor="Silver">
+                        <Grid>
+                            <Image
+                                Aspect="AspectFit"
+                                HeightRequest="100"
+                                Source="{xfFlipViewControl:ImageResource XFFlipViewControl.Resources.panda.png}"
+                                VerticalOptions="CenterAndExpand" />
+                        </Grid>
+                    </Frame>
+                </xfFlipViewControl:XNFlipView.BackView>
+
+            </xfFlipViewControl:XNFlipView>
+
+            <Button
+                Grid.Row="3"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Clicked="FlippedButton_OnClicked"
+                Text="Flip em!" />
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*" />
+                <ColumnDefinition Width="0.5*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.3*" />
+                <RowDefinition Height="0.3*" />
+                <RowDefinition Height="0.3*" />
+                <RowDefinition Height="0.1*" />
+            </Grid.RowDefinitions>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

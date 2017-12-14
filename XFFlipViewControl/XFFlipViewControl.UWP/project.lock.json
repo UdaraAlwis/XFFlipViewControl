@@ -22308,7 +22308,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\WORK\\xamariners\\Nuget": {},
+        "https://nuget.org/api/v2/": {}
       },
       "frameworks": {
         "uap10.0.10586": {
