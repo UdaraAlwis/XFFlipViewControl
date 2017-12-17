@@ -100,8 +100,7 @@ namespace XFFlipViewControl
             typeof(XNFlipView),
             false,
             BindingMode.Default,
-            null,
-            IsFlippedPropertyChanged);
+            null);
 
         /// <summary>
         /// Gets or Sets whether the view is already flipped
@@ -112,71 +111,5 @@ namespace XFFlipViewControl
             get { return (bool)this.GetValue(IsFlippedProperty); }
             set { this.SetValue(IsFlippedProperty, value); }
         }
-
-        private static void IsFlippedPropertyChanged(BindableObject bindable, object oldValue, object newValue)
-        {
-            //if ((bool)newValue)
-            //{
-            //    ((XNFlipView)bindable).FlipFromFrontToBack();
-            //}
-            //else
-            //{
-            //    ((XNFlipView)bindable).FlipFromBackToFront();
-            //}
-        }
-
-        ///// <summary>
-        ///// Performs the flip
-        ///// </summary>
-        //private async void FlipFromFrontToBack()
-        //{
-        //    await FrontToBackRotate();
-
-        //    // Change the visible content
-        //    this.FrontView.IsVisible = false;
-        //    this.BackView.IsVisible = true;
-
-        //    await BackToFrontRotate();
-        //}
-
-        ///// <summary>
-        ///// Performs the flip
-        ///// </summary>
-        //private async void FlipFromBackToFront()
-        //{
-        //    await FrontToBackRotate();
-
-        //    // Change the visible content
-        //    this.BackView.IsVisible = false;
-        //    this.FrontView.IsVisible = true;
-
-        //    await BackToFrontRotate();
-        //}
-
-        //#region Animation Stuff
-
-        //private async Task<bool> FrontToBackRotate()
-        //{
-        //    ViewExtensions.CancelAnimations(this);
-
-        //    this.RotationY = 360;
-
-        //    await this.RotateYTo(270, 500, Easing.Linear);
-
-        //    return true;
-        //}
-
-        //private async Task<bool> BackToFrontRotate()
-        //{
-        //    ViewExtensions.CancelAnimations(this);
-
-        //    this.RotationY = 90;
-
-        //    await this.RotateYTo(0, 500, Easing.Linear);
-
-        //    return true;
-        //}
-
-        //#endregion
     }
 }
